@@ -5,17 +5,17 @@
 
 @section('content')
     <!-- Page Header Start -->
-    <div class="page-header">
+    <div class="page-header parallaxie">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Client <span>Testimonials</span></h1>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Testimonial</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">testimonial</li>
                             </ol>
                         </nav>
                     </div>
@@ -26,267 +26,258 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Testimonials Section Start -->
-    <div class="our-testimonials">
+    <!-- Scrolling Ticker Section Start -->
+    <div class="our-scrolling-ticker subpages-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+            </div>
+
+            <div class="scrolling-content">
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <!-- Scrolling Ticker Section End -->
+
+    <!-- Page Testimonial Start -->
+    <div class="page-testimonial">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">client reviews</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">What our clients <span>say</span></h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Don't just take our word for it. Here's what our satisfied clients have to say about our services.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                @foreach($testimonials as $testimonial)
-                <div class="col-lg-6 col-md-12">
-                    <!-- Testimonial Item Start -->
-                    <div class="testimonial-item wow fadeInUp" data-wow-delay="{{ 0.25 * ($loop->index % 2) }}s">
-                        <!-- Testimonial Header Start -->
-                        <div class="testimonial-header">
-                            <div class="testimonial-image">
-                                <figure>
-                                    <img src="{{ asset('assets/images/' . $testimonial['image']) }}" alt="{{ $testimonial['name'] }}">
+                    <!-- Testimonial Box List Start -->
+                    <div class="testimonial-box-list">
+                        <!-- Testimonial Box Item Start -->
+                        <div class="testimonial-box-item wow fadeInUp">
+                            <!-- Client Author Image Start -->
+                            <div class="client-author-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset('assets/images/author-1.jpg') }}" alt="">
                                 </figure>
                             </div>
-                            <div class="testimonial-info">
-                                <h4>{{ $testimonial['name'] }}</h4>
-                                <p>{{ $testimonial['position'] }} at {{ $testimonial['company'] }}</p>
-                                <div class="testimonial-rating">
-                                    @for($i = 1; $i <= 5; $i++)
-                                        @if($i <= $testimonial['rating'])
-                                            <i class="fa-solid fa-star"></i>
-                                        @else
-                                            <i class="fa-regular fa-star"></i>
-                                        @endif
-                                    @endfor
+                            <!-- Client Author Image End -->
+
+                            <!-- Client Testimonial Content Start -->
+                            <div class="client-testimonial-content">
+                                <!-- Client Testimonial Rating Start -->
+                                <div class="client-testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial Header End -->
+                                <!-- Client Testimonial Rating End -->
 
-                        <!-- Testimonial Content Start -->
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="Quote">
-                            </div>
-                            <p>"{{ $testimonial['testimonial'] }}"</p>
-                        </div>
-                        <!-- Testimonial Content End -->
-                    </div>
-                    <!-- Testimonial Item End -->
-                </div>
-                @endforeach
+                                <!-- Client Testimonial Info Start -->
+                                <div class="client-testimonial-info">
+                                    <p>The team transformed our brand's online presence with creativity and precision. The results exceeded our expectations! Their digital marketing strategies helped us reach a broader audience and significantly boosted our sales.</p>
+                                </div>
+                                <!-- Client Testimonial Info End -->
 
-                <!-- Additional Static Testimonials -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="testimonial-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="testimonial-header">
-                            <div class="testimonial-image">
-                                <figure>
-                                    <img src="{{ asset('assets/images/team-3.jpg') }}" alt="Jessica Parker">
+                                <!-- Client Author Content Start -->
+                                <div class="client-author-content">
+                                    <!-- Client Author Title Start -->
+                                    <div class="client-author-title">
+                                        <h3>alexander bennett</h3>
+                                        <p>senior brand strategist</p>
+                                    </div>
+                                    <!-- Client Author Title End -->
+
+                                    <!-- Client Author Logo Start -->
+                                    <div class="client-author-logo">
+                                        <img src="{{ asset('assets/images/icon-testimonial-logo.svg') }}" alt="">
+                                    </div>
+                                    <!-- Client Author Logo End -->
+                                </div>
+                                <!-- Client Author Content End -->
+                            </div>
+                            <!-- Client Testimonial Content End -->
+                        </div>
+                        <!-- Testimonial Box Item End -->
+
+                        <!-- Testimonial Box Item Start -->
+                        <div class="testimonial-box-item wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Client Author Image Start -->
+                            <div class="client-author-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset('assets/images/author-2.jpg') }}" alt="">
                                 </figure>
                             </div>
-                            <div class="testimonial-info">
-                                <h4>Jessica Parker</h4>
-                                <p>Brand Manager at Creative Studios</p>
-                                <div class="testimonial-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="Quote">
-                            </div>
-                            <p>"The team's expertise in social media strategy helped us build a strong online community. Our follower engagement has never been higher!"</p>
-                        </div>
-                    </div>
-                </div>
+                            <!-- Client Author Image End -->
 
-                <div class="col-lg-6 col-md-12">
-                    <div class="testimonial-item wow fadeInUp" data-wow-delay="0.75s">
-                        <div class="testimonial-header">
-                            <div class="testimonial-image">
-                                <figure>
-                                    <img src="{{ asset('assets/images/team-4.jpg') }}" alt="Robert Chen">
+                            <!-- Client Testimonial Content Start -->
+                            <div class="client-testimonial-content">
+                                <!-- Client Testimonial Rating Start -->
+                                <div class="client-testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <!-- Client Testimonial Rating End -->
+
+                                <!-- Client Testimonial Info Start -->
+                                <div class="client-testimonial-info">
+                                    <p>We approached Isabella Morgan with the goal of completely transforming our brand's digital presence, and they exceeded all expectations. Their team took the time to understand our business.</p>
+                                </div>
+                                <!-- Client Testimonial Info End -->
+
+                                <!-- Client Author Content Start -->
+                                <div class="client-author-content">
+                                    <!-- Client Author Title Start -->
+                                    <div class="client-author-title">
+                                        <h3>isabella morgan</h3>
+                                        <p>director of digital marketing</p>
+                                    </div>
+                                    <!-- Client Author Title End -->
+
+                                    <!-- Client Author Logo Start -->
+                                    <div class="client-author-logo">
+                                        <img src="{{ asset('assets/images/icon-testimonial-logo.svg') }}" alt="">
+                                    </div>
+                                    <!-- Client Author Logo End -->
+                                </div>
+                                <!-- Client Author Content End -->
+                            </div>
+                            <!-- Client Testimonial Content End -->
+                        </div>
+                        <!-- Testimonial Box Item End -->
+
+                        <!-- Testimonial Box Item Start -->
+                        <div class="testimonial-box-item wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Client Author Image Start -->
+                            <div class="client-author-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset('assets/images/author-3.jpg') }}" alt="">
                                 </figure>
                             </div>
-                            <div class="testimonial-info">
-                                <h4>Robert Chen</h4>
-                                <p>Founder at E-commerce Plus</p>
-                                <div class="testimonial-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                            <!-- Client Author Image End -->
+
+                            <!-- Client Testimonial Content Start -->
+                            <div class="client-testimonial-content">
+                                <!-- Client Testimonial Rating Start -->
+                                <div class="client-testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
                                 </div>
+                                <!-- Client Testimonial Rating End -->
+
+                                <!-- Client Testimonial Info Start -->
+                                <div class="client-testimonial-info">
+                                    <p>Collaborating with Christopher Hughes was an absolute pleasure. Their team brought fresh ideas to the table and helped us completely reimagine our online branding and user experience.</p>
+                                </div>
+                                <!-- Client Testimonial Info End -->
+
+                                <!-- Client Author Content Start -->
+                                <div class="client-author-content">
+                                    <!-- Client Author Title Start -->
+                                    <div class="client-author-title">
+                                        <h3>christopher hughes</h3>
+                                        <p>chief technology officer</p>
+                                    </div>
+                                    <!-- Client Author Title End -->
+
+                                    <!-- Client Author Logo Start -->
+                                    <div class="client-author-logo">
+                                        <img src="{{ asset('assets/images/icon-testimonial-logo.svg') }}" alt="">
+                                    </div>
+                                    <!-- Client Author Logo End -->
+                                </div>
+                                <!-- Client Author Content End -->
                             </div>
+                            <!-- Client Testimonial Content End -->
                         </div>
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="Quote">
+                        <!-- Testimonial Box Item End -->
+
+                        <!-- Testimonial Box Item Start -->
+                        <div class="testimonial-box-item wow fadeInUp" data-wow-delay="0.6s">
+                            <!-- Client Author Image Start -->
+                            <div class="client-author-image">
+                                <figure class="image-anime">
+                                    <img src="{{ asset('assets/images/author-4.jpg') }}" alt="">
+                                </figure>
                             </div>
-                            <p>"Professional, creative, and results-driven. They transformed our social media presence and significantly boosted our online sales."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonials Section End -->
+                            <!-- Client Author Image End -->
 
-    <!-- Client Logos Section Start -->
-    <div class="client-logos">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">trusted by</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Amazing <span>clients</span></h2>
-                    </div>
-                </div>
-            </div>
+                            <!-- Client Testimonial Content Start -->
+                            <div class="client-testimonial-content">
+                                <!-- Client Testimonial Rating Start -->
+                                <div class="client-testimonial-rating">
+                                    <ul>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <!-- Client Testimonial Rating End -->
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="client-logos-grid">
-                        <div class="client-logo-item wow fadeInUp">
-                            <img src="{{ asset('assets/images/client-logo-1.svg') }}" alt="Client Logo">
-                        </div>
-                        <div class="client-logo-item wow fadeInUp" data-wow-delay="0.1s">
-                            <img src="{{ asset('assets/images/client-logo-2.svg') }}" alt="Client Logo">
-                        </div>
-                        <div class="client-logo-item wow fadeInUp" data-wow-delay="0.2s">
-                            <img src="{{ asset('assets/images/client-logo-3.svg') }}" alt="Client Logo">
-                        </div>
-                        <div class="client-logo-item wow fadeInUp" data-wow-delay="0.3s">
-                            <img src="{{ asset('assets/images/client-logo-4.svg') }}" alt="Client Logo">
-                        </div>
-                        <div class="client-logo-item wow fadeInUp" data-wow-delay="0.4s">
-                            <img src="{{ asset('assets/images/client-logo-5.svg') }}" alt="Client Logo">
-                        </div>
-                        <div class="client-logo-item wow fadeInUp" data-wow-delay="0.5s">
-                            <img src="{{ asset('assets/images/client-logo-6.svg') }}" alt="Client Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Client Logos Section End -->
+                                <!-- Client Testimonial Info Start -->
+                                <div class="client-testimonial-info">
+                                    <p>When we first partnered with Olivia Reynolds, we were in need of a complete website overhaul. They not only delivered a beautiful, responsive website, but they also implemented a robust digital marketing strategy.</p>
+                                </div>
+                                <!-- Client Testimonial Info End -->
 
-    <!-- Stats Section Start -->
-    <div class="testimonial-stats">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item wow fadeInUp">
-                        <div class="stat-icon">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h2><span class="counter">2500</span>+</h2>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item wow fadeInUp" data-wow-delay="0.25s">
-                        <div class="stat-icon">
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h2><span class="counter">4.9</span>/5</h2>
-                            <p>Average Rating</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="stat-icon">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h2><span class="counter">150</span>+</h2>
-                            <p>Awards Won</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item wow fadeInUp" data-wow-delay="0.75s">
-                        <div class="stat-icon">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h2><span class="counter">300</span>%</h2>
-                            <p>Average Growth</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Stats Section End -->
+                                <!-- Client Author Content Start -->
+                                <div class="client-author-content">
+                                    <!-- Client Author Title Start -->
+                                    <div class="client-author-title">
+                                        <h3>olivia reynolds</h3>
+                                        <p>senior marketing manager</p>
+                                    </div>
+                                    <!-- Client Author Title End -->
 
-    <!-- Video Testimonial Section Start -->
-    <div class="video-testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">video testimonial</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Hear from our <span>clients</span></h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="video-testimonial-box">
-                        <div class="video-thumbnail">
-                            <img src="{{ asset('assets/images/testimonial-video-thumb.jpg') }}" alt="Video Testimonial">
-                            <div class="play-button">
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-popup">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
+                                    <!-- Client Author Logo Start -->
+                                    <div class="client-author-logo">
+                                        <img src="{{ asset('assets/images/icon-testimonial-logo.svg') }}" alt="">
+                                    </div>
+                                    <!-- Client Author Logo End -->
+                                </div>
+                                <!-- Client Author Content End -->
                             </div>
+                            <!-- Client Testimonial Content End -->
                         </div>
-                        <div class="video-testimonial-content">
-                            <h4>"Working with this team was a game-changer for our business"</h4>
-                            <p>- Sarah Johnson, CEO of TechStart Inc.</p>
-                        </div>
+                        <!-- Testimonial Box Item End -->
                     </div>
+                    <!-- Testimonial Box List End -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- Video Testimonial Section End -->
-
-    <!-- CTA Section Start -->
-    <div class="testimonial-cta">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="cta-box">
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Ready to join our <span>success stories?</span></h2>
-                        <p class="wow fadeInUp">Let us help you achieve the same amazing results as our satisfied clients.</p>
-                        <div class="cta-btn wow fadeInUp" data-wow-delay="0.25s">
-                            <a href="{{ route('contact') }}" class="btn-default">Start Your Success Story</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- CTA Section End -->
+    <!-- Page Testimonial End -->
 @endsection

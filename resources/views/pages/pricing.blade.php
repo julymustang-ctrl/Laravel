@@ -5,17 +5,17 @@
 
 @section('content')
     <!-- Page Header Start -->
-    <div class="page-header">
+    <div class="page-header parallaxie">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Pricing <span>Plans</span></h1>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Our <span>pricing</span></h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">our pricing</li>
                             </ol>
                         </nav>
                     </div>
@@ -26,86 +26,442 @@
     </div>
     <!-- Page Header End -->
 
-    <!-- Pricing Section Start -->
-    <div class="our-pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">pricing plans</h3>
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Choose the perfect <span>package</span></h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Select from our flexible pricing options designed to fit businesses of all sizes.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
+    <!-- Scrolling Ticker Section Start -->
+    <div class="our-scrolling-ticker subpages-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+            <div class="scrolling-content">
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
             </div>
 
-            <!-- Pricing Toggle Start -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="pricing-toggle">
-                        <span class="toggle-label">Monthly</span>
-                        <label class="switch">
-                            <input type="checkbox" id="pricingToggle">
-                            <span class="slider round"></span>
-                        </label>
-                        <span class="toggle-label">Yearly <small>(Save 20%)</small></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Pricing Toggle End -->
-
-            <div class="row">
-                @foreach($pricingPlans as $plan)
-                <div class="col-lg-6 col-md-6">
-                    <!-- Pricing Item Start -->
-                    <div class="pricing-item {{ $loop->last ? 'featured' : '' }} wow fadeInUp" data-wow-delay="{{ 0.25 * $loop->index }}s">
-                        @if($loop->last)
-                        <div class="popular-badge">Most Popular</div>
-                        @endif
-
-                        <!-- Pricing Header Start -->
-                        <div class="pricing-header">
-                            <div class="pricing-icon">
-                                <img src="{{ asset('assets/images/icon-pricing-' . $plan['id'] . '.svg') }}" alt="{{ $plan['name'] }}">
-                            </div>
-                            <h3 class="pricing-title">{{ $plan['name'] }}</h3>
-                            <div class="pricing-price">
-                                <h2>$<span class="price-amount" data-monthly="{{ $plan['price'] }}" data-yearly="{{ $plan['price'] * 10 }}">${{ $plan['price'] }}</span></h2>
-                                <p class="price-period">per month</p>
-                            </div>
-                            <p class="pricing-description">{{ $plan['description'] }}</p>
-                        </div>
-                        <!-- Pricing Header End -->
-
-                        <!-- Pricing Features Start -->
-                        <div class="pricing-features">
-                            <ul>
-                                @foreach($plan['features'] as $feature)
-                                <li><i class="fa-solid fa-check"></i> {{ $feature }}</li>
-                                @endforeach
-                                @if($loop->first)
-                                <li class="unavailable"><i class="fa-solid fa-times"></i> Advanced Analytics</li>
-                                <li class="unavailable"><i class="fa-solid fa-times"></i> 24/7 Priority Support</li>
-                                @endif
-                            </ul>
-                        </div>
-                        <!-- Pricing Features End -->
-
-                        <!-- Pricing Button Start -->
-                        <div class="pricing-button">
-                            <a href="{{ route('contact') }}" class="btn-default {{ $loop->last ? 'btn-primary' : '' }}">Choose Plan</a>
-                        </div>
-                        <!-- Pricing Button End -->
-                    </div>
-                    <!-- Pricing Item End -->
-                </div>
-                @endforeach
+            <div class="scrolling-content">
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-1.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-2.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-3.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-4.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-5.svg') }}" alt=""></span>
+                <span><img src="{{ asset('assets/images/client-logo-6.svg') }}" alt=""></span>
             </div>
         </div>
     </div>
-    <!-- Pricing Section End -->
+    <!-- Scrolling Ticker Section End -->
+
+    <!-- Page Pricing Start -->
+    <div class="page-pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item wow fadeInUp">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <img src="{{ asset('assets/images/icon-pricing-1.svg') }}" alt="">
+                            <h3>simple plan</h3>
+                            <p>Start at $29 included 3 client</p>
+                            <h2><sup>$</sup>29<sub>/per month</sub></h2>
+                        </div>
+                        <!-- Pricing Header End -->
+
+                        <!-- Pricing Box Body Start -->
+                        <div class="pricing-body">
+                            <a href="{{ route('contact') }}" class="btn-default btn-highlighted">Get started</a>
+                        </div>
+                        <!-- Pricing Box Body End -->
+
+                        <!-- Pricing Button Start -->
+                        <div class="pricing-footer">
+                            <ul>
+                                <li>24/7 customer support</li>
+                                <li>Multi-platform integration</li>
+                                <li>Free initial consultation</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing Button End -->
+                    </div>
+                    <!-- Pricing Box End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item highlighted-box wow fadeInUp" data-wow-delay="0.25s">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <img src="{{ asset('assets/images/icon-pricing-2.svg') }}" alt="">
+                            <h3>Standard Plan</h3>
+                            <p>Start at $39 included 3 client</p>
+                            <h2><sup>$</sup>39<sub>/per month</sub></h2>
+                        </div>
+                        <!-- Pricing Header End -->
+
+                        <!-- Pricing Box Body Start -->
+                        <div class="pricing-body">
+                            <a href="{{ route('contact') }}" class="btn-default btn-highlighted">Get started</a>
+                        </div>
+                        <!-- Pricing Box Body End -->
+
+                        <!-- Pricing Button Start -->
+                        <div class="pricing-footer">
+                            <ul>
+                                <li>24/7 customer support</li>
+                                <li>Multi-platform integration</li>
+                                <li>Free initial consultation</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing Button End -->
+                    </div>
+                    <!-- Pricing Box End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Pricing Box Start -->
+                    <div class="pricing-item wow fadeInUp" data-wow-delay="0.5s">
+                        <!-- Pricing Header Start -->
+                        <div class="pricing-header">
+                            <img src="{{ asset('assets/images/icon-pricing-1.svg') }}" alt="">
+                            <h3>premium plan</h3>
+                            <p>Start at $49 included 3 client</p>
+                            <h2><sup>$</sup>49<sub>/per month</sub></h2>
+                        </div>
+                        <!-- Pricing Header End -->
+
+                        <!-- Pricing Box Body Start -->
+                        <div class="pricing-body">
+                            <a href="{{ route('contact') }}" class="btn-default btn-highlighted">Get started</a>
+                        </div>
+                        <!-- Pricing Box Body End -->
+
+                        <!-- Pricing Button Start -->
+                        <div class="pricing-footer">
+                            <ul>
+                                <li>24/7 customer support</li>
+                                <li>Multi-platform integration</li>
+                                <li>Free initial consultation</li>
+                            </ul>
+                        </div>
+                        <!-- Pricing Button End -->
+                    </div>
+                    <!-- Pricing Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Pricing End -->
+
+    <!-- Our Testimonial Section Start -->
+    <div class="our-testimonial">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp">testimonials</h3>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">What <span>clients</span> are saying</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Section Button Start -->
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="{{ route('contact') }}" class="btn-default">contact us</a>
+                    </div>
+                    <!-- Section Button End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">	                                   
+                                        <div class="testimonial-header">
+                                            <div class="testimonial-content">
+                                                <p>"Working with this team has a game-changer for our brand engagement skyrocketed, we've seen a noticeable increase in sales."</p>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <div class="author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="{{ asset('assets/images/author-1.jpg') }}" alt="">
+                                                    </figure>
+                                                </div>            
+                                                <div class="author-content">
+                                                    <h3>arlene mcCoy</h3>
+                                                    <p>Co Founder</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+
+                                        <div class="testimonial-body">
+                                            <div class="testimonial-counter">
+                                                <h2><span class="counter">80</span>K</h2>
+                                                <p>Instagram Followers</p>
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">	                                   
+                                        <div class="testimonial-header">
+                                            <div class="testimonial-content">
+                                                <p>"Working with this team has a game-changer for our brand engagement skyrocketed, we've seen a noticeable increase in sales."</p>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <div class="author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="{{ asset('assets/images/author-2.jpg') }}" alt="">
+                                                    </figure>
+                                                </div>            
+                                                <div class="author-content">
+                                                    <h3>arlene mcCoy</h3>
+                                                    <p>Co Founder</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="testimonial-body">
+                                            <div class="testimonial-counter">
+                                                <h2><span class="counter">130</span>K</h2>
+                                                <p>Instagram Followers</p>
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">	                                   
+                                        <div class="testimonial-header">
+                                            <div class="testimonial-content">
+                                                <p>"Working with this team has a game-changer for our brand engagement skyrocketed, we've seen a noticeable increase in sales."</p>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <div class="author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="{{ asset('assets/images/author-3.jpg') }}" alt="">
+                                                    </figure>
+                                                </div>            
+                                                <div class="author-content">
+                                                    <h3>arlene mcCoy</h3>
+                                                    <p>Co Founder</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="testimonial-body">
+                                            <div class="testimonial-counter">
+                                                <h2><span class="counter">80</span>M</h2>
+                                                <p>Instagram Followers</p>
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-header">
+                                            <div class="testimonial-content">
+                                                <p>"Working with this team has a game-changer for our brand engagement skyrocketed, we've seen a noticeable increase in sales."</p>
+                                            </div>
+                                            <div class="testimonial-author">
+                                                <div class="author-image">
+                                                    <figure class="image-anime">
+                                                        <img src="{{ asset('assets/images/author-4.jpg') }}" alt="">
+                                                    </figure>
+                                                </div>            
+                                                <div class="author-content">
+                                                    <h3>arlene mcCoy</h3>
+                                                    <p>Co Founder</p>
+                                                </div>
+                                            </div>
+                                        </div>                               
+
+                                        <div class="testimonial-body">
+                                            <div class="testimonial-counter">
+                                                <h2><span class="counter">200</span>M+</h2>
+                                                <p>Social Followers</p>
+                                            </div>
+                                            <div class="testimonial-quote">
+                                                <img src="{{ asset('assets/images/testimonial-quote.svg') }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->                                
+                            </div>
+                            <div class="testimonial-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Slider End -->
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Our Testimonial Section End -->
+
+    <!-- Our FAQs Section Start -->
+    <div class="our-faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Our FAQs Content Start -->
+                    <div class="our-faqs-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">faqs</h3>
+                            <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to your common <span>questions</span></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Find clear and concise answers to the most frequently asked questions about our social media marketing services.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- FAQs Review Box Start -->
+                        <div class="faqs-review-box">
+                            <!-- Review Rating Box Start -->
+                            <div class="review-rating-box">
+                                <h2><span class="counter">4.9</span></h2>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <!-- Review Rating Box End -->
+                            
+                            <!-- Review Client Box Start -->
+                            <div class="review-client-box">
+                                <!-- Review Image Start -->
+                                <div class="satisfy-client-images">
+                                    <div class="satisfy-client-img">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{ asset('assets/images/satisfy-client-img-1.jpg') }}" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="satisfy-client-img">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{ asset('assets/images/satisfy-client-img-2.jpg') }}" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="satisfy-client-img">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{ asset('assets/images/satisfy-client-img-3.jpg') }}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Review Image End -->
+
+                                <!-- Satisfy Client Box Start -->
+                                <div class="satisfy-client-content wow fadeInUp">
+                                    <p>Explore our trust score Customer Reviews</p>
+                                </div>
+                            </div>
+                            <!-- Review Client Box End -->
+                        </div>
+                        <!-- FAQs Review Box End -->
+                    </div>
+                    <!-- Our FAQs Content End -->
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- FAQ Accordion Start -->
+                    <div class="faq-accordion" id="faqaccordion">
+                        <!-- FAQ Item Start -->
+                        <div class="accordion-item wow fadeInUp">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    What is Social Media Marketing?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
+                                <div class="accordion-body">
+                                    <p>We specialize in major platforms like Facebook, Instagram, Twitter, LinkedIn Pinterest, tailoring strategy to each platform's unique audience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Which platforms do you specialize in?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
+                                <div class="accordion-body">
+                                    <p>We specialize in major platforms like Facebook, Instagram, Twitter, LinkedIn Pinterest, tailoring strategy to each platform's unique audience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    How do you measure success?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
+                                <div class="accordion-body">
+                                    <p>We track engagement rates, follower growth, website traffic, conversion rates, and ROI to measure campaign success and optimize strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
+
+                        <!-- FAQ Item Start -->
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Can I see results before committing?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, we offer a free consultation and initial strategy session to demonstrate our approach and potential results for your business.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
+                    </div>
+                    <!-- FAQ Accordion End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our FAQs Section End -->
+@endsection
 
     <!-- Pricing Features Comparison Start -->
     <div class="pricing-comparison">
